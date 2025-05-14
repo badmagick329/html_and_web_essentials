@@ -3,25 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/output.css" />
     <title>About</title>
   </head>
   <body class="bg-background text-foreground">
     <header>
-      <nav class="flex flex-row justify-between bg-red-400">
-        <div class="flex gap-2">
-          <img src="../assets/Images/badmagick-logo-1-128.png" />
-          <p>Tagline goes here</p>
+      <nav
+        class="bg-primary hidden flex-row items-center justify-between px-2 md:flex"
+      >
+        <div class="flex items-center gap-2">
+          <a href="index.html">
+            <img
+              class="h-20 w-20"
+              src="../assets/Images/badmagick-logo-1-128.png"
+            />
+          </a>
+          <p class="self-end pb-4 md:text-base lg:text-lg">
+            Magick in every commit
+          </p>
         </div>
         <ul>
-          <li>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
+          <li class="flex gap-4">
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="skills.html">Skills</a>
+            <a class="nav-link" href="projects.html">Projects</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
-        <div></div>
+        <div class="flex gap-4">
+          <a href="https://www.facebook.com" target="_blank">
+            <img
+              src="../assets/Images/facebook.svg"
+              alt="Facebook"
+              class="h-8 w-8 invert"
+            />
+          </a>
+          <a href="https://www.twitter.com" target="_blank">
+            <img
+              src="../assets/Images/twitter.svg"
+              alt="Twitter"
+              class="h-8 w-8 invert"
+            />
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img
+              src="../assets/Images/instagram.svg"
+              alt="Instagram"
+              class="h-8 w-8 invert"
+            />
+          </a>
+        </div>
+      </nav>
+      <nav
+        class="bg-primary flex flex-row items-center justify-between px-2 md:hidden"
+      >
+        <div class="flex items-center gap-2">
+          <a href="index.html">
+            <img
+              class="h-20 w-20"
+              src="../assets/Images/badmagick-logo-1-128.png"
+            />
+          </a>
+          <p class="self-end pb-4 md:text-sm">SMALL</p>
+        </div>
+        <ul>
+          <li class="flex gap-4">
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="skills.html">Skills</a>
+            <a class="nav-link" href="projects.html">Projects</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="flex gap-4">
+          <a href="https://www.facebook.com" target="_blank">
+            <img
+              src="../assets/Images/facebook.svg"
+              alt="Facebook"
+              class="h-8 w-8 invert"
+            />
+          </a>
+          <a href="https://www.twitter.com" target="_blank">
+            <img
+              src="../assets/Images/twitter.svg"
+              alt="Twitter"
+              class="h-8 w-8 invert"
+            />
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img
+              src="../assets/Images/instagram.svg"
+              alt="Instagram"
+              class="h-8 w-8 invert"
+            />
+          </a>
+        </div>
       </nav>
     </header>
     <p>Hello</p>
