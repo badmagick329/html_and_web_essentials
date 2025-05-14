@@ -12,7 +12,7 @@
     @apply bg-gradient-to-r from-blue-500 to-purple-600;
   }
   .nav-link {
-    @apply hover:text-primary-light text-xl font-semibold underline-offset-4 transition-all duration-200 hover:underline;
+    @apply hover:text-primary-light text-lg font-semibold underline-offset-4 transition-all duration-200 hover:underline lg:text-xl;
   }
 }
 
