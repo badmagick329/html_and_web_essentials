@@ -11,6 +11,12 @@
   .btn-gradient {
     @apply bg-gradient-to-r from-blue-500 to-purple-600;
   }
+  .primary-button {
+    @apply bg-primary-light text-foreground hover:bg-primary-light/80 cursor-pointer p-2 transition-colors duration-150;
+  }
+  .outline-button {
+    @apply border-foreground/60 hover:bg-background/40 cursor-pointer border-2 p-2 transition-colors duration-150;
+  }
   .nav-link {
     @apply hover:text-primary-light text-lg font-semibold underline-offset-4 transition-all duration-200 hover:underline lg:text-xl;
   }

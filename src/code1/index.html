@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../css/output.css" />
     <title>Home</title>
   </head>
-  <body class="bg-background text-foreground">
+  <body class="bg-background text-foreground flex min-h-screen flex-col">
     <header>
       <!-- REGULAR NAV BAR -->
       <nav
@@ -211,7 +211,45 @@
         </details>
       </nav>
     </header>
-    <p>Hello</p>
-    <footer>Footer</footer>
+    <main class="flex flex-1 flex-col">
+      <section class="flex flex-1 flex-col">
+        <!-- Image background -->
+        <div
+          class="flex w-full flex-1 bg-[url('../assets/Images/gallery1_lg.jpg')] bg-cover bg-no-repeat"
+        >
+          <!-- Overlay -->
+          <div class="bg-background/80 flex w-full flex-col justify-center">
+            <!-- Image content card -->
+            <div
+              class="flex max-w-[500px] flex-col justify-center gap-2 px-2 sm:px-6"
+            >
+              <h1
+                class="py-2 text-xl font-semibold px-2"
+              >
+                Full-Stack Web Developer
+              </h1>
+              <div class="flex flex-col gap-2 px-2 py-4">
+                <p>
+                  A passionate web developer specializing in creating 
+                  responsive, user-friendly websites and web applications. 
+                  With expertise in modern frameworks and a keen eye for design, 
+                  I transform ideas into seamless digital experiences that help 
+                  businesses grow online.
+                </p>
+                <a class="outline-button mx-2 self-end" href="about.html">Read more</a>
+              </div>
+              <div class="flex gap-4">
+                <a href="projects.html" class="primary-button flex-1 text-center">
+                  Portfolio
+                </a>
+                <a href="skills.html" class="primary-button flex-1 text-center">
+                  Services
+                </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="flex-none">Footer</footer>
   </body>
 </html>
