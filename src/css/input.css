@@ -1,4 +1,10 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #23182f;
+  --color-background: #0e0e0e;
+  --color-foreground: white;
+}
 
 @layer utilities {
   .btn-gradient {
