@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .btn-gradient {
+    @apply bg-gradient-to-r from-blue-500 to-purple-600;
+  }
+}

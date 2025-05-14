@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "build-css": "npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --minify"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": true,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "tabWidth": 2,
+    "useTabs": false,
+    "printWidth": 80,
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.6",
+    "tailwindcss": "^4.1.6"
+  }
+}
