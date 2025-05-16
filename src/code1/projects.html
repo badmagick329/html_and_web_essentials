@@ -217,24 +217,27 @@
     <main class="flex flex-1 flex-col p-4 md:p-8">
       <!-- Project Categories -->
       <nav class="mb-8" data-navtype="project-categories">
-        <ul class="flex flex-wrap justify-center gap-4">
+        <p class="text-foreground/60 text-center">Placeholder Filters</p>
+        <ul
+          class="grid grid-cols-1 place-content-center place-items-center items-center justify-center gap-4 sm:grid-cols-2 xl:flex xl:flex-row xl:flex-wrap"
+        >
           <li>
-            <button class="primary-button" data-category="web">
+            <button class="primary-button w-64" data-category="web">
               Web Development
             </button>
           </li>
           <li>
-            <button class="primary-button" data-category="tools">
+            <button class="primary-button w-64" data-category="tools">
               Tools & Utilities
             </button>
           </li>
           <li>
-            <button class="primary-button" data-category="desktop">
+            <button class="primary-button w-64" data-category="desktop">
               Desktop Apps
             </button>
           </li>
           <li>
-            <button class="primary-button" data-category="games">
+            <button class="primary-button w-64" data-category="games">
               Games & Interactive
             </button>
           </li>
@@ -242,46 +245,70 @@
       </nav>
 
       <!-- Projects Grid -->
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- ------------ -->
-        <!-- Project Card -->
-        <!-- ------------ -->
+      <div class="grid-auto-fill">
+        <!-- -------------- -->
+        <!-- Project Card 1 -->
+        <!-- -------------- -->
         <article
-          class="bg-background border-foreground/20 overflow-hidden rounded-lg border"
+          class="bg-background border-foreground/20 flex flex-col overflow-hidden rounded-lg border"
         >
           <img
             src="../assets/Images/discordgifs.png"
             alt="Project Name"
             class="h-48 w-full object-cover"
           />
-          <div class="flex flex-col gap-4 p-4">
-            <!-- Brief description -->
-            <section>
-              <h2 class="mb-2 text-xl font-bold">
-                Discord Emotes and Stickers
-              </h2>
-              <p class="text-foreground/80 mb-4">
-                Create optimised gifs and apngs for discord emotes and stickers
-                from your video clips.
-              </p>
-            </section>
+          <div class="flex flex-1 flex-col justify-between gap-4 p-4">
+            <div class="flex flex-col gap-4">
+              <!-- Brief description -->
+              <section>
+                <h2 class="mb-2 text-xl font-bold">
+                  Discord Emotes and Stickers
+                </h2>
+                <p class="text-foreground/80 mb-4">
+                  Create optimised gifs and apngs for discord emotes and
+                  stickers from your video clips.
+                </p>
+              </section>
 
-            <!-- Features List -->
-            <section class="mb-4">
-              <h3 class="mb-2 font-semibold underline underline-offset-4">
-                Key Features
-              </h3>
-              <ul
-                class="text-foreground/80 mb-4 flex list-inside list-disc flex-col gap-2"
-              >
-                <li>
-                  Automatically resizes the output so it's <em>just</em> under
-                  the discord size limits
-                </li>
-                <li>Processes video locally for quick results</li>
-                <li>Ensures optimal quality image quality</li>
-              </ul>
-            </section>
+              <!-- Features List Desktop Version -->
+              <section class="mb-4 hidden sm:block">
+                <h3 class="mb-2 font-semibold underline underline-offset-4">
+                  Key Features
+                </h3>
+                <ul
+                  class="text-foreground/80 mb-4 flex list-inside list-disc flex-col gap-2"
+                >
+                  <li>
+                    Automatically resizes the output so it's <em>just</em> under
+                    the discord size limits
+                  </li>
+                  <li>Processes video locally for quick results</li>
+                  <li>Ensures optimal quality image quality</li>
+                </ul>
+              </section>
+              <!-- Features List Mobile Version -->
+              <section class="mb-4 flex sm:hidden">
+                <details class="group">
+                  <summary class="cursor-pointer list-none">
+                    <h3
+                      class="outline-button mb-2 underline-offset-4 group-open:border-0 group-open:underline"
+                    >
+                      Key Features
+                    </h3>
+                  </summary>
+                  <ul
+                    class="text-foreground/80 mb-4 flex list-inside list-disc flex-col gap-2"
+                  >
+                    <li>
+                      Automatically resizes the output so it's
+                      <em>just</em> under the discord size limits
+                    </li>
+                    <li>Processes video locally for quick results</li>
+                    <li>Ensures optimal quality image quality</li>
+                  </ul>
+                </details>
+              </section>
+            </div>
 
             <!-- Tech Stack Popup -->
             <section>
@@ -321,45 +348,84 @@
             </section>
           </div>
         </article>
-        <!-- ------------ -->
-        <!-- Project Card -->
-        <!-- ------------ -->
+        <!-- -------------- -->
+        <!-- Project Card 2 -->
+        <!-- -------------- -->
         <article
-          class="bg-background border-foreground/20 overflow-hidden rounded-lg border"
+          class="bg-background border-foreground/20 flex flex-col overflow-hidden rounded-lg border"
         >
           <img
-            src="../assets/Images/discordgifs.png"
+            src="../assets/Images/gfys.png"
             alt="Project Name"
             class="h-48 w-full object-cover"
           />
-          <div class="flex flex-col gap-4 p-4">
-            <!-- Brief description -->
-            <section>
-              <h2 class="mb-2 text-xl font-bold">
-                Discord Emotes and Stickers
-              </h2>
-              <p class="text-foreground/80 mb-4">
-                Create optimised gifs and apngs for discord emotes and stickers
-                from your video clips.
-              </p>
-            </section>
+          <div class="gap-4bg-red-300 flex flex-1 flex-col justify-between p-4">
+            <div class="flex flex-col gap-4">
+              <!-- Brief description -->
+              <section>
+                <h2 class="mb-2 text-xl font-bold">Red Velvet Gfys Archive</h2>
+                <p class="text-foreground/80 mb-4">
+                  Browse through an archive of high quality gfys of Red Velvet
+                </p>
+              </section>
 
-            <!-- Features List -->
-            <section class="mb-4">
-              <h3 class="mb-2 font-semibold underline underline-offset-4">
-                Key Features
-              </h3>
-              <ul
-                class="text-foreground/80 mb-4 flex list-inside list-disc flex-col gap-2"
-              >
-                <li>
-                  Automatically resizes the output so it's <em>just</em> under
-                  the discord size limits
-                </li>
-                <li>Processes video locally for quick results</li>
-                <li>Ensures optimal quality image quality</li>
-              </ul>
-            </section>
+              <!-- Features List Desktop Version -->
+              <section class="mb-4 hidden sm:block">
+                <h3 class="mb-2 font-semibold underline underline-offset-4">
+                  Key Features
+                </h3>
+                <ul
+                  class="text-foreground/80 mb-4 flex list-inside list-disc flex-col gap-2"
+                >
+                  <li>
+                    Preserves gfys from popular Red Velvet accounts that were
+                    active Gfycat
+                  </li>
+                  <li>
+                    All gfys have a high quality version with minimal
+                    compression
+                  </li>
+                  <li>
+                    A more aggressively compressed version is made available
+                    through imgur for easy embedding
+                  </li>
+                  <li>Navigation can be done with keyboard shortcuts</li>
+                  <li>Features autoplay and shuffle functionality</li>
+                  <li>More extensive search options than Gfycat</li>
+                </ul>
+              </section>
+              <!-- Features List Mobile Version -->
+              <section class="mb-4 flex sm:hidden">
+                <details class="group">
+                  <summary class="cursor-pointer list-none">
+                    <h3
+                      class="outline-button mb-2 underline-offset-4 group-open:border-0 group-open:underline"
+                    >
+                      Key Features
+                    </h3>
+                  </summary>
+                  <ul
+                    class="text-foreground/80 mb-4 flex list-inside list-disc flex-col gap-2"
+                  >
+                    <li>
+                      Preserves gfys from popular Red Velvet accounts that were
+                      active Gfycat
+                    </li>
+                    <li>
+                      All gfys have a high quality version with minimal
+                      compression
+                    </li>
+                    <li>
+                      A more aggressively compressed version is made available
+                      through imgur for easy embedding
+                    </li>
+                    <li>Navigation can be done with keyboard shortcuts</li>
+                    <li>Features autoplay and shuffle functionality</li>
+                    <li>More extensive search options than Gfycat</li>
+                  </ul>
+                </details>
+              </section>
+            </div>
 
             <!-- Tech Stack Popup -->
             <section>
@@ -374,7 +440,14 @@
                 >
                   <ul class="flex flex-wrap gap-2">
                     <li class="bg-primary px-2 py-1 text-sm">Next.js</li>
-                    <li class="bg-primary px-2 py-1 text-sm">ffmpeg.wasm</li>
+                    <li class="bg-primary px-2 py-1 text-sm">Django</li>
+                    <li class="bg-primary px-2 py-1 text-sm">
+                      Django Rest Framework
+                    </li>
+                    <li class="bg-primary px-2 py-1 text-sm">PostgresSQL</li>
+                    <li class="bg-primary px-2 py-1 text-sm">ffmpeg</li>
+                    <li class="bg-primary px-2 py-1 text-sm">Docker</li>
+                    <li class="bg-primary px-2 py-1 text-sm">Nginx</li>
                   </ul>
                 </div>
               </details>
@@ -382,7 +455,7 @@
               <!-- Action Links -->
               <div class="flex gap-4">
                 <a
-                  href="https://mgck.ink/discordgifs"
+                  href="https://mgck.ink/gfys"
                   class="primary-button select-none"
                   target="_blank"
                 >
