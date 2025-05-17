@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './font.css';
 
 @theme {
   --color-primary: #23182f;
@@ -24,12 +25,12 @@
     @apply border-foreground/60 hover:bg-background/40 cursor-pointer border-2 p-2 transition-colors duration-150;
   }
   .nav-link {
-    @apply hover:text-primary-light text-lg font-semibold underline-offset-4 transition-all duration-200 hover:underline lg:text-xl;
+    @apply hover:text-primary-light text-lg font-semibold underline-offset-4 transition-all duration-200 hover:underline lg:text-2xl;
   }
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .grid-auto-fill {
@@ -40,4 +41,12 @@ body {
     minmax(min(var(--grid-min-col-size), 100%), 1fr)
   );
   gap: 1.5rem;
+}
+
+.bebas-neue {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.fira-code {
+  font-family: 'Fira Code', monospace;
 }
