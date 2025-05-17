@@ -14,8 +14,9 @@
   </head>
   <body class="bg-background text-foreground flex min-h-screen flex-col">
     <header>
-      <!-- REGULAR NAV BAR -->
-      <nav class="bg-primary flex flex-row items-center justify-between px-2">
+      <nav
+        class="bg-primary flex flex-row items-center justify-between gap-8 px-2"
+      >
         <div class="flex items-center gap-2">
           <h2 class="text-4xl font-bold">Logo</h2>
         </div>
@@ -38,8 +39,60 @@
             <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
-        <div class="flex gap-2 lg:gap-4">
+        <div class="flex flex-1 gap-2 lg:gap-4">
           <!-- search thing -->
+          <div class="flex flex-1 items-center gap-4">
+            <!-- search svg -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <input
+              type="search"
+              class="bg-foreground/80 text-background flex-1 rounded px-4 py-2 focus:outline-none"
+              title="Search"
+            />
+          </div>
+          <button class="text-foreground hover:text-foreground/80" title="Help">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </button>
+          <button class="text-foreground hover:text-foreground/80" title="Cart">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+          </button>
         </div>
       </nav>
     </header>
