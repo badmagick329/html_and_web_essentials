@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/output.css" />
     <title>Reactful Designs - UI Elements</title>
   </head>
@@ -18,9 +24,14 @@
           <h1 class="text-4xl font-bold">
             Stop Reinventing the Wheel. Use Ours.
           </h1>
-          <p>
+          <p class="text-lg">
             Beautifully crafted React UI elements, so you can focus on the hard
-            stuff (like centering a div).
+            stuff, like centering a
+            <span class="fira-code relative inline-block h-[1.1em] w-[5ch]">
+              <span class="absolute top-0 left-[0.1ch]">[</span>
+              <span class="animated-div-text absolute top-0">div</span>
+              <span class="absolute top-0 right-[0.1ch]">]</span> </span
+            >.
           </p>
           <button
             class="primary-button-light text-foreground cursor-pointer px-6 py-2"
@@ -31,7 +42,7 @@
       </div>
     </header>
 
-    <section class="bg-white py-12">
+    <section class="bg-foreground py-12">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div class="space-y-4 text-center">

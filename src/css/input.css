@@ -10,7 +10,26 @@
   --color-foreground-light: #4a5565;
 }
 
+@keyframes centerDivAnimation {
+  0%,
+  50%,
+  70%,
+  100% {
+    left: 0.6ch;
+  }
+  40% {
+    left: 1ch;
+  }
+  60% {
+    left: 1.4ch;
+  }
+}
+
 @layer utilities {
+  .animated-div-text {
+    animation: centerDivAnimation 4s ease-in-out infinite;
+  }
+
   .btn-gradient {
     @apply bg-gradient-to-r from-blue-500 to-purple-600;
   }
@@ -36,7 +55,7 @@ body {
 }
 
 .grid-auto-fill {
-  --grid-min-col-size: 540px;
+  --grid-min-col-size: 540px; /* Ensure this was what you intended, or adjust e.g. to 240px */
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
