@@ -6,6 +6,8 @@
   --color-primary-light: #9b5cc5;
   --color-background: #0e0e0e;
   --color-foreground: white;
+  --color-background-light: #f3f4f6;
+  --color-foreground-light: #4a5565;
 }
 
 @layer utilities {
@@ -16,7 +18,7 @@
     @apply text-foreground bg-primary hover:bg-primary-light cursor-pointer px-4 py-2 transition-all duration-200;
   }
   .primary-button-light {
-    @apply text-foreground bg-primary-light cursor-pointer px-4 py-2 transition-all duration-200 hover:opacity-90;
+    @apply text-foreground bg-primary-light hover:bg-primary-light/80 cursor-pointer px-4 py-2 transition-all duration-200;
   }
   .button-active {
     @apply bg-primary-light text-foreground cursor-pointer p-2;
