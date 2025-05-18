@@ -755,6 +755,15 @@
   .text-background {
     color: var(--color-background);
   }
+  .text-background-light {
+    color: var(--color-background-light);
+  }
+  .text-background\/80 {
+    color: color-mix(in srgb, #0e0e0e 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-background) 80%, transparent);
+    }
+  }
   .text-foreground {
     color: var(--color-foreground);
   }
@@ -775,6 +784,9 @@
   }
   .text-gray-700 {
     color: var(--color-gray-700);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
@@ -828,6 +840,11 @@
   .group-open\:underline {
     &:is(:where(.group):is([open], :popover-open, :open) *) {
       text-decoration-line: underline;
+    }
+  }
+  .placeholder\:text-foreground-light {
+    &::placeholder {
+      color: var(--color-foreground-light);
     }
   }
   .hover\:scale-110 {
