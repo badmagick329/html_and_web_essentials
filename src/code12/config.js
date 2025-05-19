@@ -11,6 +11,8 @@
 
 /** @type {import('@maizzle/framework').Config} */
 export default {
+  baseImageURL: 'https://mgck.ink/uploads/',
+
   build: {
     content: ['templates/**/*.html'],
     static: {
