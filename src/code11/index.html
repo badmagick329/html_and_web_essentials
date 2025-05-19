@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="../assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="../css/output.css" />
+    <title>Shop</title>
+  </head>
+  <body class="bg-background text-foreground flex min-h-screen flex-col">
+    <!-- Header -->
+    <header class="bg-primary">
+      <nav
+        class="grid grid-cols-1 gap-6 px-4 py-4 md:grid-cols-2 lg:grid-cols-6"
+      >
+        <h1 class="text-4xl font-bold">LOGO</h1>
+        <div class="flex max-w-xl items-center gap-4 px-4 lg:col-span-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-9 w-9"
+          >
+            <circle cx="11" cy="11" r="7" />
+            <line x1="16.65" y1="16.65" x2="21" y2="21" />
+          </svg>
+
+          <input
+            type="search"
+            placeholder="Search"
+            class="bg-background text-foreground border-foreground/60 w-full rounded border-2 px-4 py-2"
+          />
+        </div>
+        <div class="mx-auto flex items-center gap-4 lg:col-span-2">
+          <a
+            href="#"
+            class="hover:text-primary-light transition-all duration-200"
+            >Home</a
+          >
+          <div class="border-foreground h-5 border-r-2"></div>
+          <a
+            href="#"
+            class="hover:text-primary-light transition-all duration-200"
+            >About Us</a
+          >
+          <div class="border-foreground h-5 border-r-2"></div>
+          <a
+            href="#"
+            class="hover:text-primary-light transition-all duration-200"
+            >Shop</a
+          >
+          <div class="border-foreground h-5 border-r-2"></div>
+          <a
+            href="#"
+            class="hover:text-primary-light transition-all duration-200"
+            >Help</a
+          >
+        </div>
+        <div class="mx-auto flex items-center gap-4">
+          <svg
+            class="text-background bg-foreground h-9 w-9 rounded-full p-1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="currentColor"
+          >
+            <circle cx="16.5" cy="18.5" r="1.5" />
+            <circle cx="9.5" cy="18.5" r="1.5" />
+            <path
+              d="M18 16H8a1 1 0 0 1-.958-.713L4.256 6H3a1 1 0 0 1 0-2h2a1 1 
+       0 0 1 .958.713L6.344 6H21a1 1 0 0 1 .937 1.352l-3 8A1 1 
+       0 0 1 18 16zm-9.256-2h8.563l2.25-6H6.944z"
+            />
+          </svg>
+
+          <button class="primary-button-light">Your Cart</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-1">
+      <!-- EXAMPLES OF SERVICES OR PRODUCTS Section -->
+      <section class="container mx-auto px-4 py-8 pt-12">
+        <h2 class="mb-6 text-center text-2xl font-semibold">
+          EXAMPLES OF SERVICES OR PRODUCTS
+        </h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div
+            class="bg-primary/10 flex aspect-square flex-col items-center justify-center rounded-lg p-6"
+          >
+            <div
+              class="bg-primary flex h-20 w-20 items-center justify-center rounded-full"
+            >
+              <img
+                src="../assets/Images/badmagick-logo-1.png"
+                alt="Product"
+                class="h-12 w-12"
+              />
+            </div>
+          </div>
+          <div
+            class="bg-primary/10 flex aspect-square flex-col items-center justify-center rounded-lg p-6"
+          >
+            <div
+              class="bg-primary flex h-20 w-20 items-center justify-center rounded-full"
+            >
+              <img
+                src="../assets/Images/badmagick-logo-1.png"
+                alt="Product"
+                class="h-12 w-12"
+              />
+            </div>
+          </div>
+          <div
+            class="bg-primary/10 flex aspect-square flex-col items-center justify-center rounded-lg p-6"
+          >
+            <div
+              class="bg-primary flex h-20 w-20 items-center justify-center rounded-full"
+            >
+              <img
+                src="../assets/Images/badmagick-logo-1.png"
+                alt="Product"
+                class="h-12 w-12"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 flex justify-center">
+          <button class="primary-button-light-rounded px-8">SHOP NOW</button>
+        </div>
+      </section>
+
+      <!-- FEATURED PRODUCTS -->
+      <section class="bg-foreground/2 py-12">
+        <div class="container mx-auto px-4">
+          <h2 class="mb-8 text-center text-2xl font-semibold">
+            FEATURED PRODUCTS
+          </h2>
+          <!-- Carousel -->
+          <div
+            id="splide"
+            class="splide"
+            aria-label="Image carousel"
+            role="region"
+          >
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li
+                  class="splide__slide flex flex-col items-center justify-center gap-4 py-6"
+                >
+                  <img
+                    src="../assets/Images/gallery1-thumbnail.jpg"
+                    alt="Gallery image 1"
+                  />
+                  <div>
+                    <p class="text-center">Product 1</p>
+                    <p>Price 100$</p>
+                  </div>
+                </li>
+                <li
+                  class="splide__slide flex flex-col items-center justify-center gap-4 py-6"
+                >
+                  <img
+                    src="../assets/Images/gallery3-thumbnail.jpg"
+                    alt="Gallery image 2"
+                  />
+                  <div>
+                    <p class="text-center">Product 2</p>
+                    <p>Price 200$</p>
+                  </div>
+                </li>
+                <li
+                  class="splide__slide flex flex-col items-center justify-center gap-4 py-6"
+                >
+                  <img
+                    src="../assets/Images/gallery5-thumbnail.jpg"
+                    alt="Gallery image 3"
+                  />
+                  <div>
+                    <p class="text-center">Product 3</p>
+                    <p>Price 300$</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWS LETTER -->
+      <section
+        class="border-foreground grid grid-cols-1 gap-8 border-t-2 border-b-2 px-6 py-8 lg:grid-cols-2"
+      >
+        <div class="mx-auto w-full">
+          <h2 class="mb-4 text-4xl font-semibold">NEWS LETTER</h2>
+          <p>
+            A short description that invites users to sign up for weekly news on
+            what the latest products and services. A short description that
+            invites users to sign up for weekly news on what the latest products
+            and services. A short description that invites users to sign up for
+            weekly news on what the latest products and services.
+          </p>
+        </div>
+        <div class="mx-auto w-full self-end">
+          <div class="flex flex-col gap-8 sm:flex-row">
+            <input
+              type="email"
+              placeholder="EMAIL ADDRESS"
+              class="bg-background text-foreground border-foreground/60 flex-1 rounded border-2 px-4 py-2"
+            />
+            <button class="primary-button-light-rounded">SUBSCRIBE</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Grid -->
+      <section class="border-foreground mx-auto border-b-2 px-6 py-8">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-4">
+          <!-- Big image -->
+          <div
+            class="bg-primary/10 flex aspect-square items-center justify-center rounded-lg p-6 md:col-span-2 md:row-span-2"
+          >
+            <div
+              class="bg-primary flex h-20 w-20 items-center justify-center rounded-full"
+            >
+              <img
+                src="../assets/Images/badmagick-logo-1.png"
+                alt="Featured Content"
+                class="h-12 w-12"
+              />
+            </div>
+          </div>
+          <!-- Smaller Image -->
+          <div class="flex flex-col gap-4">
+            <div
+              class="bg-primary/10 flex aspect-square flex-1 items-center justify-center rounded-lg p-6 lg:aspect-auto"
+            >
+              <div
+                class="bg-primary flex h-20 w-20 items-center justify-center rounded-full"
+              >
+                <img
+                  src="../assets/Images/badmagick-logo-1.png"
+                  alt="Featured Content"
+                  class="h-12 w-12"
+                />
+              </div>
+            </div>
+            <div>
+              <p class="text-center">Product 1</p>
+              <p class="text-center">Price 100$</p>
+            </div>
+          </div>
+          <!-- Smaller Image -->
+          <div class="flex flex-col gap-4">
+            <div
+              class="bg-primary/10 flex aspect-square flex-1 items-center justify-center rounded-lg p-6 lg:aspect-auto"
+            >
+              <div
+                class="bg-primary flex h-20 w-20 items-center justify-center rounded-full"
+              >
+                <img
+                  src="../assets/Images/badmagick-logo-1.png"
+                  alt="Featured Content"
+                  class="h-12 w-12"
+                />
+              </div>
+            </div>
+            <div>
+              <p class="text-center">Product 2</p>
+              <p class="text-center">Price 200$</p>
+            </div>
+          </div>
+          <!-- Smaller Image -->
+          <div class="flex flex-col gap-4">
+            <div
+              class="bg-primary/10 flex aspect-square flex-1 items-center justify-center rounded-lg p-6 lg:aspect-auto"
+            >
+              <div
+                class="bg-primary flex h-20 w-20 items-center justify-center rounded-full"
+              >
+                <img
+                  src="../assets/Images/badmagick-logo-1.png"
+                  alt="Featured Content"
+                  class="h-12 w-12"
+                />
+              </div>
+            </div>
+            <div>
+              <p class="text-center">Product 3</p>
+              <p class="text-center">Price 300$</p>
+            </div>
+          </div>
+          <!-- Smaller Image -->
+          <div class="flex flex-col gap-4">
+            <div
+              class="bg-primary/10 flex aspect-square flex-1 items-center justify-center rounded-lg p-6 lg:aspect-auto"
+            >
+              <div
+                class="bg-primary flex h-20 w-20 items-center justify-center rounded-full"
+              >
+                <img
+                  src="../assets/Images/badmagick-logo-1.png"
+                  alt="Featured Content"
+                  class="h-12 w-12"
+                />
+              </div>
+            </div>
+            <div>
+              <p class="text-center">Product 4</p>
+              <p class="text-center">Price 400$</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT YOUR SHOP -->
+      <section class="bg-primary/10 py-12">
+        <div class="px-6">
+          <h2 class="mb-6 text-center text-2xl font-semibold">
+            ABOUT YOUR SHOP
+          </h2>
+          <p class="text-foreground/80 mx-auto max-w-2xl text-center">
+            Here is where you can try and captivate the users by providing them
+            with some background to your shops existance. Your mission as an
+            online shop and your vision for the future of your shop, products
+            and services.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-foreground/2 text-foreground pt-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-5">
+          <!-- Logo and Info -->
+          <div class="space-y-6">
+            <div
+              class="bg-foreground border-background relative flex h-32 w-32 items-center justify-center rounded-full border-2"
+            >
+              <span class="text-background text-2xl font-bold">LOGO</span>
+            </div>
+            <p>
+              Third planet from the sun, Orion Arm, Milky Way. Take a right when
+              you get to Jupiter
+            </p>
+          </div>
+
+          <!-- Main Menu -->
+          <div class="lg:pt-8">
+            <h3 class="mb-4 text-2xl font-semibold">MAIN MENU</h3>
+            <ul class="list-inside list-disc space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                  >Shop</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                  >Help</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="lg:pt-8">
+            <h3 class="mb-4 text-2xl font-semibold">COMPANY</h3>
+            <ul class="list-inside list-disc space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                  >The Company</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                  >Press</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Discover -->
+          <div class="lg:pt-8">
+            <h3 class="mb-4 text-2xl font-semibold">DISCOVER</h3>
+            <ul class="list-inside list-disc space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                  >The Team</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                  >Our History</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                  >Brand Motto</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Find us on -->
+          <div class="lg:pt-8">
+            <h3 class="mb-4 text-2xl font-semibold">FIND US ON</h3>
+            <ul class="list-inside list-disc space-y-2">
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                >
+                  <img
+                    src="../assets/Images/facebook.svg"
+                    alt="Facebook"
+                    class="h-6 w-6 invert"
+                  />
+                </a>
+                <p>Facebook</p>
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                >
+                  <img
+                    src="../assets/Images/twitter.svg"
+                    alt="Twitter"
+                    class="h-6 w-6 invert"
+                  />
+                </a>
+                <p>Twitter</p>
+              </div>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  class="hover:text-primary-light transition-all duration-200"
+                >
+                  <img
+                    src="../assets/Images/instagram.svg"
+                    alt="Instagram"
+                    class="h-6 w-6 invert"
+                  />
+                </a>
+                <p>Instagram</p>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+      </div>
+      <div
+        class="text-foreground/60 bg-background mt-8 py-6 text-center text-sm"
+      >
+        <p>COPYRIGHT 2001. ALL RIGHTS RESERVED COMPANY NAME</p>
+      </div>
+    </footer>
+  </body>
+</html>

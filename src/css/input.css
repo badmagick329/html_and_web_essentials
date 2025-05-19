@@ -48,6 +48,9 @@
   .nav-link {
     @apply hover:text-primary-light text-lg font-semibold underline-offset-4 transition-all duration-200 hover:underline lg:text-2xl;
   }
+  .primary-button-light-rounded {
+    @apply bg-primary-light text-foreground border-foreground rounded-xl border-2 px-12 py-4 text-2xl;
+  }
 }
 
 body {
