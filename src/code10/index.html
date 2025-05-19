@@ -20,7 +20,6 @@
     <title>Content Page</title>
   </head>
   <body class="bg-background text-foreground flex min-h-screen flex-col">
-    <a href="#main-content" class="skip-nav">Skip to main content</a>
     <!-- Nav -->
     <header class="bg-primary text-foreground flex gap-8 p-4" role="banner">
       <button class="primary-button-light">Menu</button>
@@ -36,7 +35,7 @@
       </div>
     </header>
 
-    <main id="main-content">
+    <main>
       <!-- Hero Section -->
       <section
         class="bg-primary grid grid-cols-1 gap-4 py-20 md:grid-cols-2"
@@ -54,7 +53,6 @@
             <button class="primary-button-light">Get Started</button>
           </div>
         </div>
-        <!-- TODO: Fix image size on smaller widths -->
         <div
           id="splide"
           class="splide"
@@ -155,11 +153,11 @@
 
       <!-- Content Section -->
       <section
-        class="bg-background flex flex-wrap gap-4 px-4 py-8"
+        class="bg-background mx-auto grid grid-cols-2 justify-items-center gap-4 px-4 py-8 md:grid-cols-3"
         aria-labelledby="content-heading"
       >
-        <div class="grid min-w-xl flex-2 grid-cols-2 gap-8 py-2">
-          <div class="col-span-2 space-y-6">
+        <div class="col-span-2 grid grid-cols-1 gap-8 py-2 md:grid-cols-2">
+          <div class="col-span-1 space-y-6 md:col-span-2">
             <h3 id="content-heading" class="text-center text-2xl">
               Content Heading
             </h3>
@@ -183,7 +181,9 @@
             </p>
           </div>
         </div>
-        <div class="h-96 w-96 min-w-xl flex-1">
+        <div
+          class="col-span-2 mx-auto h-72 w-72 md:col-span-1 md:mx-0 md:h-96 md:w-96"
+        >
           <img
             src="../assets/Images/gallery1-thumbnail.jpg"
             alt="Content Section Image"
@@ -268,11 +268,5 @@
         <!-- Grid Container End -->
       </section>
     </main>
-    <button
-      class="back-to-top text-foreground bg-primary-light cursor-pointer px-4 py-2 transition-all duration-200"
-      aria-label="Back to top"
-    >
-      ↑ Top
-    </button>
   </body>
 </html>
