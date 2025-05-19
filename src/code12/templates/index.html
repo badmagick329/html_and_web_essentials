@@ -5,9 +5,177 @@
     <style>
       @tailwind components;
       @tailwind utilities;
+
+      body {
+        font-family: sans-serif;
+      }
     </style>
   </head>
-  <body class="m-0 bg-black p-0">
-    <div class="bg-blue-500 p-6 text-white">Welcome to Maizzle!!</div>
+  <body class="m-0 bg-[#0e0e0e] text-white">
+    <main class="mx-auto flex max-w-6xl flex-col px-4">
+      <!-- Products Section -->
+      <section class="text-center">
+        <div class="bg-[url('gallery1-thumbnail.jpg')] bg-cover bg-no-repeat">
+          <div class="flex w-full flex-col gap-12 bg-[#0e0e0e]/70 py-6">
+            <div>
+              <div class="flex justify-center">
+                <span
+                  class="flex bg-white px-4 py-2 text-2xl font-bold text-black"
+                >
+                  LOGO
+                </span>
+              </div>
+              <h1 class="mb-6 text-3xl font-bold">
+                EXAMPLES OF SERVICES OR PRODUCTS
+              </h1>
+            </div>
+
+            <div>
+              <p class="mb-4">Take a look at our awesome products</p>
+              <button
+                class="cursor-pointer rounded-xl bg-indigo-800 px-6 py-2 text-white hover:bg-indigo-600"
+              >
+                READ MORE BUTTON
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Section -->
+      <section>
+        <div class="p-8">
+          <p class="text-center text-lg tracking-widest">
+            Product or service feature
+          </p>
+          <h2 class="mb-4 text-center text-2xl font-bold">COOL FEATURE</h2>
+          <p class="mb-6 text-center">
+            Here is where you can try and captivate the users by providing them
+            with some awesome additional information about this product.
+            Something cool and everything is a good feature
+          </p>
+          <div class="grid grid-cols-2 items-center gap-6 py-4">
+            <div class="overflow-hidden">
+              <img
+                class="h-full w-full object-contain"
+                src="gallery2-thumbnail.jpg"
+              />
+            </div>
+            <div class="mb-8 flex flex-col items-center space-y-8">
+              <h3 class="mb-2 text-center text-xl font-bold">Sub-heading</h3>
+              <p class="mb-4 text-center">
+                Add additional feature listing here to help the user make an
+                educated decision on purchasing this product or service
+              </p>
+              <button
+                class="mx-auto cursor-pointer rounded-xl bg-indigo-800 px-6 py-2 text-white hover:bg-indigo-600"
+              >
+                READ MORE BUTTON
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white/5 p-8">
+          <div class="grid grid-cols-2 items-center gap-6 py-4">
+            <div class="mb-8 flex flex-col items-center space-y-8">
+              <h3 class="mb-2 text-center text-xl font-bold">
+                Secondary sub-heading
+              </h3>
+              <p class="mb-4 text-center">
+                Add additional feature listing here to help the user make an
+                educated decision on purchasing this product or service
+              </p>
+              <button
+                class="mx-auto cursor-pointer rounded-xl bg-indigo-800 px-6 py-2 text-white hover:bg-indigo-600"
+              >
+                READ MORE BUTTON
+              </button>
+            </div>
+            <div class="overflow-hidden">
+              <img
+                class="h-full w-full object-contain"
+                src="gallery2-thumbnail.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Company Section -->
+      <section class="mb-16">
+        <div class="rounded-lg bg-[#0e0e0e] p-8">
+          <div class="flex items-center justify-between gap-4">
+            <!-- LOGO -->
+            <div
+              class="flex h-12 w-12 items-center justify-center self-start rounded-full bg-white p-2 text-black"
+            >
+              LOGO
+            </div>
+            <!-- LOGO end -->
+            <div class="flex flex-col gap-4">
+              <!-- company name and follow -->
+              <div class="flex items-center gap-8">
+                <span class="font-bold">COMPANY NAME</span>
+                <button
+                  class="bg-blue-500 px-4 py-1 font-semibold text-white hover:bg-blue-600"
+                >
+                  FOLLOW
+                </button>
+              </div>
+              <!-- company name and follow end -->
+
+              <!-- Numbers -->
+              <div class="flex gap-6 text-sm text-slate-400">
+                <span>1,004K MESSAGES</span>
+                <span>28K FOLLOWING</span>
+                <span>190K FOLLOWING</span>
+              </div>
+              <!-- Numbers end -->
+              <!-- Description -->
+              <p>
+                Add additional feature listing here to help the user make an
+                educated decision on purchasing this product or service
+              </p>
+              <!-- Description -->
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#0e0e0e]">
+          <div class="grid w-full grid-cols-2 justify-between gap-12">
+            <div class="overflow-hidden">
+              <img
+                class="h-full w-full object-contain"
+                src="gallery1-thumbnail.jpg"
+              />
+            </div>
+            <div class="flex flex-col">
+              <div class="flex items-center justify-between gap-4">
+                <!-- LOGO -->
+                <div
+                  class="flex h-8 w-8 items-center justify-center self-start rounded-full bg-white p-2 text-xs text-black"
+                >
+                  LOGO
+                </div>
+                <!-- LOGO end -->
+                <span class="font-bold">COMPANY NAME</span>
+                <div>
+                  <button
+                    class="bg-blue-500 px-4 py-1 font-semibold text-white hover:bg-blue-600"
+                  >
+                    FOLLOW
+                  </button>
+                </div>
+              </div>
+              <p>
+                Add additional feature listing here to help the user make an
+                educated decision on purchasing this product or service
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
