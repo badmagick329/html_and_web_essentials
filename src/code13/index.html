@@ -16,7 +16,7 @@
     class="bg-background text-foreground flex min-h-screen flex-col antialiased"
   >
     <header
-      class="mb-4 grid grid-cols-2 justify-items-center gap-4 px-4 py-2 lg:grid-cols-[auto_1fr_auto]"
+      class="mb-4 grid grid-cols-1 justify-items-center gap-4 px-4 py-2 sm:grid-cols-2 lg:grid-cols-[auto_1fr_auto]"
     >
       <!-- Left -->
       <div class="order-1 flex cursor-pointer items-center gap-4">
@@ -38,7 +38,7 @@
       </div>
       <!-- Middle -->
       <div
-        class="order-3 col-span-2 flex items-center gap-4 lg:order-2 lg:col-span-1"
+        class="order-3 col-span-1 flex items-center gap-4 sm:col-span-2 lg:order-2 lg:col-span-1"
       >
         <div class="relative sm:min-w-sm lg:min-w-2xl">
           <input
@@ -135,9 +135,9 @@
     </header>
 
     <!-- MAIN -->
-    <main class="grid grid-cols-[240px_1fr] gap-2">
+    <main class="flex gap-2 md:grid md:grid-cols-[240px_1fr]">
       <!-- Sidebar -->
-      <aside class="flex flex-col px-4">
+      <aside class="hidden flex-col px-4 md:flex">
         <button
           class="bg-foreground/10 hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-4 py-2 text-start"
         >
@@ -708,7 +708,7 @@
       </aside>
       <section class="flex flex-col">
         <!-- Tags list -->
-        <div class="flex gap-4 px-2">
+        <div class="flex flex-wrap gap-4 px-2">
           <button
             class="text-background bg-foreground/80 rounded-lg px-3 py-1 text-sm"
           >
