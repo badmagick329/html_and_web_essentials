@@ -58,13 +58,23 @@ body {
 }
 
 .grid-auto-fill {
-  --grid-min-col-size: 540px; /* Ensure this was what you intended, or adjust e.g. to 240px */
+  --grid-min-col-size: 540px;
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
     minmax(min(var(--grid-min-col-size), 100%), 1fr)
   );
   gap: 1.5rem;
+}
+
+.grid-auto-fill-yt {
+  --grid-min-col-size: 340px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(var(--grid-min-col-size), 100%), 1fr)
+  );
+  gap: 0.8rem;
 }
 
 .bebas-neue {

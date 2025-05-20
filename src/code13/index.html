@@ -1,0 +1,1185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/output.css" />
+    <title>YouVideo</title>
+  </head>
+  <body
+    class="bg-background text-foreground flex min-h-screen flex-col antialiased"
+  >
+    <header
+      class="mb-4 grid grid-cols-2 justify-items-center gap-4 px-4 py-2 lg:grid-cols-[auto_1fr_auto]"
+    >
+      <!-- Left -->
+      <div class="order-1 flex cursor-pointer items-center gap-4">
+        <a href="#">
+          <img
+            src="../assets/Images/hamburger.svg"
+            alt="Hamburger Menu"
+            class="h-8 w-8 invert"
+          />
+        </a>
+        <a class="flex items-center gap-1">
+          <img
+            src="../assets/Images/youtube.svg"
+            alt="YouVideo"
+            class="h-8 w-8 invert"
+          />
+          <p>YouVideo</p>
+        </a>
+      </div>
+      <!-- Middle -->
+      <div
+        class="order-3 col-span-2 flex items-center gap-4 lg:order-2 lg:col-span-1"
+      >
+        <div class="relative sm:min-w-sm lg:min-w-2xl">
+          <input
+            class="border-foreground/4 bg-foreground/1 w-full rounded-full border-2 px-4 py-2 pr-12 focus:outline-none"
+            type="search"
+            placeholder="Search"
+          />
+          <div
+            class="bg-foreground/4 absolute top-1/2 right-0.5 -translate-y-1/2 transform cursor-pointer rounded-r-4xl px-6 py-2"
+          >
+            <!-- Search icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="bg-foreground/4 cursor-pointer rounded-full p-3">
+          <!-- Microphone -->
+          <svg
+            class="h-5 w-5"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+            <line x1="12" y1="19" x2="12" y2="23" />
+            <line x1="8" y1="23" x2="16" y2="23" />
+          </svg>
+        </div>
+      </div>
+      <!-- Right -->
+      <div class="order-2 flex items-center gap-4 lg:order-3">
+        <div
+          class="bg-foreground/4 flex items-center gap-2 rounded-4xl px-4 py-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="hover:cursor-pointer"
+          >
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+          <p class="text-sm">Create</p>
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="hover:cursor-pointer"
+          >
+            <path
+              d="M18 8a6 6 0 00-12 0v5c0 .538-.214 1.055-.595 1.436L4 16h16l-1.405-1.564A2.032 2.032 0 0118 13V8z"
+            />
+            <path d="M13.73 21a2 2 0 01-3.46 0" />
+          </svg>
+        </div>
+        <p
+          class="flex h-9 w-9 items-center justify-center rounded-full bg-green-800 hover:cursor-pointer"
+        >
+          S
+        </p>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="grid grid-cols-[240px_1fr] gap-2">
+      <!-- Sidebar -->
+      <aside class="flex flex-col px-4">
+        <button
+          class="bg-foreground/10 hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-4 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <!-- Pretend this is an svg -->
+            <span class="h-4 w-4"></span>
+            <span class="text-sm">Home</span>
+            <span class="h-1 w-1"></span>
+          </div>
+        </button>
+        <button
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-4 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <!-- Pretend this is an svg -->
+            <span class="h-4 w-4"></span>
+            <span class="text-sm">Subscriptions</span>
+            <span class="h-1 w-1 rounded-full bg-blue-500"></span>
+          </div>
+        </button>
+        <!-- Divider -->
+        <div class="py-2">
+          <div class="border-foreground/8 w-full border-b-[1px]"></div>
+        </div>
+        <button
+          class="hover:bg-foreground/10 cursor-pointer rounded-lg px-2 py-2 text-start"
+        >
+          <div class="flex items-center gap-2">
+            <span class="text-foreground/80 font-semibold">You</span>
+            <span class="text-foreground/60">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 6 15 12 9 18" />
+              </svg>
+            </span>
+          </div>
+        </button>
+        <button
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-4 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <!-- Pretend this is an svg -->
+            <span class="h-4 w-4"></span>
+            <span class="text-sm">History</span>
+            <span class="h-1 w-1"></span>
+          </div>
+        </button>
+        <button
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-4 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <!-- Pretend this is an svg -->
+            <span class="h-4 w-4"></span>
+            <span class="text-sm">Playlists</span>
+            <span class="h-1 w-1"></span>
+          </div>
+        </button>
+        <button
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-4 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <!-- Pretend this is an svg -->
+            <span class="h-4 w-4"></span>
+            <span class="text-sm">Your Videos</span>
+            <span class="h-1 w-1"></span>
+          </div>
+        </button>
+        <button
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-4 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <!-- Pretend this is an svg -->
+            <span class="h-4 w-4"></span>
+            <span class="text-sm">Watch Later</span>
+            <span class="h-1 w-1"></span>
+          </div>
+        </button>
+        <button
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-4 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <!-- Pretend this is an svg -->
+            <span class="h-4 w-4"></span>
+            <span class="text-sm">Liked Videos</span>
+            <span class="h-1 w-1"></span>
+          </div>
+        </button>
+        <!-- Divider -->
+        <div class="py-2">
+          <div class="border-foreground/8 w-full border-b-[1px]"></div>
+        </div>
+        <p class="text-foreground/80 px-2 py-2 text-start font-semibold">
+          Subscriptions
+        </p>
+        <!-- Subscription list starts -->
+        <a
+          href="https://www.youtube.com/@ThePrimeTimeagen"
+          target="_blank"
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-2 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <img
+              class="h-6 w-6 rounded-full"
+              src="https://yt3.googleusercontent.com/ytc/AIdro_k7J8-LWCa5QLDnY3x9kaArgJoSSMory4hgkYSBOFgvEg=s160-c-k-c0x00ffffff-no-rj"
+              alt="ThePrimeTime"
+            />
+            <span class="text-sm">ThePrimeTime</span>
+            <span class="h-1 w-1 rounded-full bg-blue-500"></span>
+          </div>
+        </a>
+        <a
+          href="https://www.youtube.com/@t3dotgg"
+          target="_blank"
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-2 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <img
+              class="h-6 w-6 rounded-full"
+              src="https://yt3.googleusercontent.com/Y6jut5A-dhWRlv7W81kGxVFPtZGjZN97IhBP75uLnx2AVV7ZEJUUUxBKHlFw9GcwILxkz1E_cLc=s160-c-k-c0x00ffffff-no-rj"
+              alt="Theo - t3.gg"
+            />
+            <span class="text-sm">Theo - t3.gg</span>
+            <span class="h-1 w-1 rounded-full bg-blue-500"></span>
+          </div>
+        </a>
+        <a
+          href="https://www.youtube.com/@Computerphile"
+          target="_blank"
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-2 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <img
+              class="h-6 w-6 rounded-full"
+              src="https://yt3.googleusercontent.com/ebHMyRfch3u2UTZN1WQJDp9J5U7o38T_WnGkd2QhAIQwBgvozdaOCOnfDMtngtoHWutJvLl4i0c=s160-c-k-c0x00ffffff-no-rj"
+              alt="Computerphile"
+            />
+            <span class="text-sm">Computerphile</span>
+            <span class="h-1 w-1 rounded-full bg-blue-500"></span>
+          </div>
+        </a>
+        <a
+          href="https://www.youtube.com/@WebDevCody"
+          target="_blank"
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-2 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <img
+              class="h-6 w-6 rounded-full"
+              src="https://yt3.googleusercontent.com/RSzBr1nskcPOZOBLWap9zZbqT88TozR5bD8Mv-UBdoCGDvDMTIm8xnwb9zr93PPbiUyNHlccOA=s160-c-k-c0x00ffffff-no-rj"
+              alt="WebDevCody"
+            />
+            <span class="text-sm">Web Dev Cody</span>
+            <span class="h-1 w-1 rounded-full bg-blue-500"></span>
+          </div>
+        </a>
+        <a
+          href="https://www.youtube.com/@Fireship"
+          target="_blank"
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-2 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <img
+              class="h-6 w-6 rounded-full"
+              src="https://yt3.googleusercontent.com/ytc/AIdro_mKzklyPPhghBJQH5H3HpZ108YcE618DBRLAvRUD1AjKNw=s160-c-k-c0x00ffffff-no-rj"
+              alt="Fireship"
+            />
+            <span class="text-sm">Fireship</span>
+            <span class="h-1 w-1 rounded-full bg-blue-500"></span>
+          </div>
+        </a>
+        <a
+          href="https://www.youtube.com/@InternetOfBugs"
+          target="_blank"
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-2 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <img
+              class="h-6 w-6 rounded-full"
+              src="https://yt3.googleusercontent.com/pPFVQhfWpPWoBCrOFlqn2a0UBGzRmMhXG2DyjmCfIjosRsF0dA6A3MGqnlcPJqVu-JbuYx87Nw=s160-c-k-c0x00ffffff-no-rj"
+              alt="InternetOfBugs"
+            />
+            <span class="text-sm">Internet Of Bugs</span>
+            <span class="h-1 w-1 rounded-full bg-blue-500"></span>
+          </div>
+        </a>
+        <a
+          href="https://www.youtube.com/@mattpocockuk"
+          target="_blank"
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-2 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <img
+              class="h-6 w-6 rounded-full"
+              src="https://yt3.googleusercontent.com/pSHatpqJ1olaZiyikhjdx3nbSJNdo71kzFYyyBpNhFAeK6v-zmfJPIp7HMtkWQ4bt0DRkU8X_-8=s160-c-k-c0x00ffffff-no-rj"
+              alt="mattpocockuk"
+            />
+            <span class="text-sm">Matt Pocock</span>
+            <span class="h-1 w-1 rounded-full bg-blue-500"></span>
+          </div>
+        </a>
+        <!-- Subscription list ends -->
+        <button
+          class="hover:bg-foreground/10 text-foreground/80 cursor-pointer rounded-lg px-4 py-2 text-start"
+        >
+          <div class="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+            <!-- Pretend this is an svg -->
+            <span class="h-4 w-4"></span>
+            <span class="text-sm">Show More</span>
+            <span class="h-1 w-1"></span>
+          </div>
+        </button>
+        <!-- Divider -->
+        <div class="py-2">
+          <div class="border-foreground/8 w-full border-b-[1px]"></div>
+        </div>
+        <p class="text-foreground/80 px-2 py-2 text-start font-semibold">
+          Explore
+        </p>
+        <!-- End of sidebar stuff -->
+      </aside>
+      <section class="flex flex-col">
+        <!-- Tags list -->
+        <div class="flex gap-4 px-2">
+          <button
+            class="text-background bg-foreground/80 rounded-lg px-3 py-1 text-sm"
+          >
+            All
+          </button>
+          <button
+            class="text-foreground bg-foreground/10 rounded-lg px-3 py-1 text-sm"
+          >
+            AI
+          </button>
+          <button
+            class="text-foreground bg-foreground/10 rounded-lg px-3 py-1 text-sm"
+          >
+            Computer programming
+          </button>
+          <button
+            class="text-foreground bg-foreground/10 rounded-lg px-3 py-1 text-sm"
+          >
+            Podcasts
+          </button>
+          <button
+            class="text-foreground bg-foreground/10 rounded-lg px-3 py-1 text-sm"
+          >
+            Live
+          </button>
+          <button
+            class="text-foreground bg-foreground/10 rounded-lg px-3 py-1 text-sm"
+          >
+            Consumer Electronics
+          </button>
+          <button
+            class="text-foreground bg-foreground/10 rounded-lg px-3 py-1 text-sm"
+          >
+            Recently Uploaded
+          </button>
+          <button
+            class="text-foreground bg-foreground/10 rounded-lg px-3 py-1 text-sm"
+          >
+            Watched
+          </button>
+          <button
+            class="text-foreground bg-foreground/10 rounded-lg px-3 py-1 text-sm"
+          >
+            New to you
+          </button>
+        </div>
+        <!-- Tags list end -->
+        <!-- Video Grid -->
+        <div class="flex flex-wrap gap-4 pt-12">
+          <!-- ------------- -->
+          <!-- Video Card 01 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=q1B7M5zwDzs"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/fJGNqnq-aCA/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  10:44
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                AI Has Us Between A Rock And A Hard Place
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">Internet Of Bugs</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">703 views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">31 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 02 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=NIgrGqmoeHs"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/NIgrGqmoeHs/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  4:19
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                Microsoft just opened the flood gates…
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">Fireship</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 03 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=ogNtkoHCxGA"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/ogNtkoHCxGA/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  3:10
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                What’s next? Channel update (not quitting!)
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">John Watson Rooney</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 04 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=u8DaUIQkKvs"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/u8DaUIQkKvs/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  12:18
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                Lightweight Query Specification is Your Savior
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">Zoran on C#</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 05 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=Xx4Tpsk_fnM"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/Xx4Tpsk_fnM/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  9:48
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                'Forbidden' AI Technique
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">Computerphile</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 06 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=UG_yb_WOutE"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/UG_yb_WOutE/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  11:56
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                An overview of PHP 8.5's pipe operator
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">PHP Annotated</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 07 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=q1B7M5zwDzs"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/q1B7M5zwDzs/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  2:39
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                Channel Update: Splitting off new channel for Dedicated Software
+                Pro Career Videos
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">Internet of Bugs</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 08 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=7Lf0jEgz9BA"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/7Lf0jEgz9BA/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  17:53
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                I never saw this coming
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">Theo - t3․gg</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 09 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=oxs46k1fLTA"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/oxs46k1fLTA/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  8:04
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                Clean Up Bloated CQRS Handlers with Domain Logic & Pipelines
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">CodeOpinion</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 10 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=oxs46k1fLTA"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/z4ePPCeUZTA/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  9:18
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                The Research Experiment That Saved Me From Scrolling (& Learn to
+                Love Reading Again)
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">Mr Clark's Classroom</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 11 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=-V_ObNzcRkw"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/TyWUWOqbvNU/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  5:49
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                (This video was made private so replacing thumbnail)
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">Sylvan Franklin</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 12 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=NMgruCb5oWE"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/NMgruCb5oWE/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  48:15
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                ThePrimeagen's Arch Experience - Standup #7
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">ThePrimeTime</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 13 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=v9b2d31e2W0"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/v9b2d31e2W0/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  2:53
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                Basecoat: Finally A Way To Use Shadcn WITHOUT React?
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">Better Stack</p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+
+          <!-- ------------- -->
+          <!-- Video Card 14 -->
+          <!-- ------------- -->
+          <a
+            href="https://www.youtube.com/watch?v=TyWUWOqbvNU"
+            target="_blank"
+            class="flex w-[340px] flex-col gap-1"
+          >
+            <!-- Image -->
+            <div class="overflow-hidden rounded-lg">
+              <div class="relative">
+                <img
+                  src="https://i.ytimg.com/vi_webp/TyWUWOqbvNU/maxresdefault.webp"
+                />
+                <span
+                  class="bg-background/80 absolute right-2 bottom-2 rounded-lg px-2 py-1 text-xs text-white"
+                >
+                  16:00
+                </span>
+              </div>
+            </div>
+            <!-- Title -->
+            <div class="flex justify-between gap-4">
+              <p class="text-foreground/80 font-semibold">
+                Keeping it simple to overcome procrastination
+              </p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="6" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="18" r="2" />
+              </svg>
+            </div>
+            <div>
+              <!-- Channel Name -->
+              <p class="text-foreground/60 text-sm">
+                General Musings with Kevin Powell
+              </p>
+              <!-- Views and Duration -->
+              <div class="flex items-center gap-1">
+                <span class="text-foreground/60 text-sm">42K views</span>
+                <div
+                  class="bg-foreground/60 h-[0.15rem] w-[0.15rem] rounded-full"
+                ></div>
+                <span class="text-foreground/60 text-sm">28 minutes ago</span>
+              </div>
+            </div>
+          </a>
+          <!-- Video Card End -->
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
